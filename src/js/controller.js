@@ -130,6 +130,11 @@ const controlRecipeUpload = async function (data) {
   }
 };
 
+// startup code
+const startUp = function () {
+  console.log(' Welcome to the application !');
+};
+
 // initialisation function
 const init = function () {
   bookmarksView.addHandlerBookmarks(controlBookmarks);
@@ -139,5 +144,6 @@ const init = function () {
   SearchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerclick(pagination);
   AddrecipeView.addHandlerUpload(controlRecipeUpload);
+  startUp();
 };
 init();
